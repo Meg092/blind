@@ -88,7 +88,7 @@ class BlindFirstPage extends GetView<BlindFirstLogic> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(title: const Text('Blind box record')),
+      appBar: AppBar(title: const Text('Blind box record'),automaticallyImplyLeading: false,),
       body: Container(
         width: double.infinity,
         height: double.infinity,

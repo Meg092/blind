@@ -1,9 +1,12 @@
 import 'package:blind_box/db_blind/db_blind.dart';
 import 'package:blind_box/pages/blind_add/blind_add_binding.dart';
 import 'package:blind_box/pages/blind_add/blind_add_view.dart';
+import 'package:blind_box/pages/blind_bind/blind_bind_binding.dart';
+import 'package:blind_box/pages/blind_bind/blind_bind_view.dart';
 import 'package:blind_box/pages/blind_details/blind_details_binding.dart';
 import 'package:blind_box/pages/blind_details/blind_details_view.dart';
 import 'package:blind_box/pages/blind_first/blind_first_binding.dart';
+import 'package:blind_box/pages/blind_first/blind_first_init.dart';
 import 'package:blind_box/pages/blind_first/blind_first_view.dart';
 import 'package:blind_box/pages/blind_second/blind_second_binding.dart';
 import 'package:blind_box/pages/blind_second/blind_second_view.dart';
@@ -31,7 +34,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Boxs,
-      initialRoute: '/blindTab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -83,10 +86,12 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Boxs = [
+  GetPage(name: '/', page: () => const BlindBindView(), binding: BlindBindBinding()),
   GetPage(name: '/blindRestart', page: () => const NeedRestartView(), binding: NeedRestartBinding()),
   GetPage(name: '/blindFirst', page: () => BlindFirstPage(), binding: BlindFirstBinding()),
   GetPage(name: '/blindSecond', page: () => BlindSecondPage(), binding: BlindSecondBinding()),
   GetPage(name: '/blindAdd', page: () => BlindAddPage(),  binding: BlindAddBinding()),
   GetPage(name: '/blindDetails', page: () => BlindDetailsPage(), binding: BlindDetailsBinding()),
+  GetPage(name: '/blindInit', page: () => const BlindFirstInit()),
   GetPage(name: '/blindTab', page: () => BlindTabPage(), binding: BlindTabBinding()),
 ];

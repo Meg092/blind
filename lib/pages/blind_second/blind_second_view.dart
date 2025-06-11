@@ -33,6 +33,7 @@ class BlindSecondPage extends GetView<BlindSecondLogic> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: const Text("Setting"),
+        automaticallyImplyLeading: false,
       ),
       body: Container(
         width: double.infinity,

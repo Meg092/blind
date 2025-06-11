@@ -11,8 +11,8 @@ class BlindBindView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.keeling.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.morissette.value
+              ? const CircularProgressIndicator(color: Colors.orangeAccent)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class BlindBindView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.brnyj();
+              controller.eugrb();
             },
             icon: const Icon(
               Icons.restart_alt,
